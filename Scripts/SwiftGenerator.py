@@ -54,17 +54,30 @@ class SwiftGenerator(object):
 
     def __generate_base(self, printer, unicode):
         printer.increaseIndent()
-
         printer.write("switch self.value {")
 
+        start = end = "*"
         for code in unicode:
             values = code.split("..")
+
+            if start == "*":
+                start = end = hex(int(values[0], 16))
+                continue
+
+            # print(hex(int(end, 16)+1), hex(int(values[0], 16)), hex(12371))
+            if hex(int(end, 16)+1) != hex(int(values[0], 16)):
+                # print current start, end
+                printer.write("case {}...{}: return true".format(start, end))
+                start = hex(int(values[0], 16))
+
             if len(values) == 1:
-                printer.write("case 0x{}: return true".format(values[0]))
+                end = hex(int(values[0], 16))
             elif len(values) == 2:
-                printer.write("case 0x{}...0x{}: return true".format(values[0], values[1]))
+                end = hex(int(values[1], 16))
             else:
-                raise Exception("Unicode Text should not have more than 2 pairs. Please check the code again.")
+                raise Exception("Unicode Text should only contains 1 or 2 values. Please check the text.")
+
+        printer.write("case {}...{}: return true".format(start, end))
 
         printer.write("default: return false")
         printer.write("}")
