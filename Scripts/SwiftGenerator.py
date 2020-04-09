@@ -1,6 +1,6 @@
 from CodePrinter import CodePrinter
 
-# Generate Swift file to UnicodeScalar+Extension.swift
+# Generate Swift file to UnicodeScalar+Generated.swift
 class SwiftGenerator(object):
     def __init__(self, fullWidth, halfWidth, wide, narrow, ambiguous, neutral):
         super().__init__()
@@ -64,7 +64,6 @@ class SwiftGenerator(object):
                 start = end = hex(int(values[0], 16))
                 continue
 
-            # print(hex(int(end, 16)+1), hex(int(values[0], 16)), hex(12371))
             if hex(int(end, 16)+1) != hex(int(values[0], 16)):
                 # print current start, end
                 printer.write("case {}...{}: return true".format(start, end))
