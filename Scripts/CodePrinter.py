@@ -8,6 +8,9 @@ class CodePrinter(object):
     def write(self, str):
         print(self.__tabStr * self.__depth + str)
 
+    def writeWithEnd(self, str, end):
+        print(str, end=end)
+
     def writeNewLine(self):
         print()
 
