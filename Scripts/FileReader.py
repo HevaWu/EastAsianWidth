@@ -7,7 +7,6 @@ class FileReader(object):
         self.filePath = filePath
 
     def parseFile(self):
-        print("Start Parsing EastAsianWidth.txt ... ")
         fullWidth = []
         halfWidth = []
         wide = []
@@ -50,5 +49,4 @@ class FileReader(object):
         if len(unknown) > 0:
             raise Exception("Text File should not have unknown mark. Please check EastAsianWidth.txt again.")
 
-        print("Parse EastAsianWidth.txt Finished ... ")
         return fullWidth, halfWidth, wide, narrow, ambiguous, neutral

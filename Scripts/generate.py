@@ -5,25 +5,19 @@
 
 import sys
 from FileReader import FileReader
-
-# Generate Swift file to EastAsianWidth file
-def generate(fullWidth, halfWidth, wide, narrow, ambiguous, neutral):
-    print("Start Generating UnicodeScalar+Extension.swift ... ")
-
-
-
-    print("Generate UnicodeScalar+Extension.swift Finished ... ")
+from SwiftGenerator import SwiftGenerator
 
 # input_path output_path
 def main():
     input_path = sys.argv[1]
-    output_path = sys.argv[2]
 
     filerReader = FileReader(input_path)
 
     try:
         fullWidth, halfWidth, wide, narrow, ambiguous, neutral = filerReader.parseFile()
-        generate(fullWidth, halfWidth, wide, narrow, ambiguous, neutral)
+
+        generator = SwiftGenerator(fullWidth, halfWidth, wide, narrow, ambiguous, neutral)
+        generator.generate()
     except Exception as e:
         print("Read Text File Failed: ", e)
 
