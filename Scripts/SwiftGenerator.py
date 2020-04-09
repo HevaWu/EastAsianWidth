@@ -13,25 +13,46 @@ class SwiftGenerator(object):
 
     def generate(self):
         printer = CodePrinter()
-        self.generateHeader(printer)
+        self.__generateHeader(printer)
 
         printer.write("public extension UnicodeScalar {")
-        printer.writeNewLine()
-
         printer.increaseIndent()
-        printer.write("// MARK: -")
-        printer.writeNewLine()
 
-        self.generateFullWidth(printer)
+        self.__generate_fullWidth(printer)
+        self.__generate_halfWidth(printer)
+        self.__generate_wide(printer)
+        self.__generate_narrow(printer)
+        self.__generate_ambiguous(printer)
+        self.__generate_neutral(printer)
 
         printer.decreaseIndent()
         printer.write("}")
 
-    def generateFullWidth(self, printer):
+    def __generate_fullWidth(self, printer):
         printer.write("public var isEastAsianFullwidth: Bool {")
-        self.generateBase(printer, self.fullWidth)
+        self.__generate_base(printer, self.fullWidth)
 
-    def generateBase(self, printer, unicode):
+    def __generate_halfWidth(self, printer):
+        printer.write("public var isEastAsianHalfwidth: Bool {")
+        self.__generate_base(printer, self.halfWidth)
+
+    def __generate_wide(self, printer):
+        printer.write("public var isEastAsianWide: Bool {")
+        self.__generate_base(printer, self.wide)
+
+    def __generate_narrow(self, printer):
+        printer.write("public var isEastAsianNarrow: Bool {")
+        self.__generate_base(printer, self.narrow)
+
+    def __generate_ambiguous(self, printer):
+        printer.write("public var isEastAsianAmbiguous: Bool {")
+        self.__generate_base(printer, self.ambiguous)
+
+    def __generate_neutral(self, printer):
+        printer.write("public var isEastAsianNeutral: Bool {")
+        self.__generate_base(printer, self.neutral)
+
+    def __generate_base(self, printer, unicode):
         printer.increaseIndent()
 
         printer.write("switch self.value {")
@@ -50,8 +71,9 @@ class SwiftGenerator(object):
 
         printer.decreaseIndent()
         printer.write("}")
+        printer.writeNewLine()
 
-    def generateHeader(self, printer):
+    def __generateHeader(self, printer):
         # Generate Header
         printer.write("// ")
         printer.write("// UnicodeScalar+Extension.swift")
