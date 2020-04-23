@@ -8,8 +8,8 @@
 SCRIPT_DIR=$(dirname "$0")
 PROJECT_ROOT="$SCRIPT_DIR/.."
 INPUT_FILE="$SCRIPT_DIR/EastAsianWidth.txt"
-OUTPUT_FILE="$PROJECT_ROOT/EastAsianWidth/Sources/EastAsianWidth/UnicodeScalar+Generated.swift"
-OUTPUT_TEST_FILE="$PROJECT_ROOT/EastAsianWidth/Tests/EastAsianWidthTests/EdgeCharacters+Generated.swift"
+OUTPUT_FILE="$PROJECT_ROOT/Sources/EastAsianWidth/UnicodeScalar+Generated.swift"
+OUTPUT_TEST_FILE="$PROJECT_ROOT/Tests/EastAsianWidthTests/EdgeCharacters+Generated.swift"
 
 echo "Start Generating East Asian Width Unicode Swift File..."
 python3 "$SCRIPT_DIR/generate.py" $INPUT_FILE > $OUTPUT_FILE
