@@ -66,7 +66,7 @@ We could directly run `./Scripts/run.sh` which will generate the `UnicodeScarlar
 
 ## Author
 
-HevaWu, he.wu@linecorp.com
+He Wu(HevaWu) hewu9375@gmail.com
 
 ## License
 

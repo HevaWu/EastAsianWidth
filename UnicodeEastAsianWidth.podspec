@@ -24,7 +24,7 @@ Pod::Spec.new do |s|
   s.homepage         = 'https://github.com/HevaWu/EastAsianWidth'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'HevaWu' => 'he.wu@linecorp.com' }
+  s.author           = { 'He Wu(HevaWu)' => 'hewu9375@gmail.com' }
   s.source           = { :git => 'https://github.com/HevaWu/EastAsianWidth.git', :tag => s.version.to_s }
   s.social_media_url = 'https://twitter.com/hewu9375'
 
