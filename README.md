@@ -9,14 +9,27 @@ Unicode Version: 13.0
 ## Code Structure:
 
 ```s
---- EastAsianWidth (Swift Package)
- |      |
- |       -- Sources/EastAsianWidth
+--- Sources/EastAsianWidth
  |                    |
  |                     -- String+Extension.swift
  |                     -- UnicodeScarlar+Generated.swift
  |                     -- UnicodeScarlar+Recommendations.swift
  |                     -- UnicodeScarlarView+Extension.swift
+ |
+ |- Tests/EastAsianWidthTests
+ |                    |
+ |                     -- CountByEastAsianWidthTests.swift
+ |                     -- EastAsianAmbiguousTests.swift
+ |                     -- EastAsianFullwidthTests.swift
+ |                     -- EastAsianHalfwidthTests.swift
+ |                     -- EastAsianNarrowTests.swift
+ |                     -- EastAsianNeutralTests.swift
+ |                     -- EastAsianWideTests.swift
+ |                     -- EdgeCharacters+Generated.swift
+ |                     -- FullwidthTests.swift
+ |                     -- HalfwidthTests.swift
+ |                     -- TestUtils.swift
+ |                     -- XCTestManifests.swift
  |
   - Scripts
  |     |
