@@ -64,7 +64,7 @@ class TestGenerator(object):
         printer.writeNewLine()
 
     def __generate_base(self, printer, unicode):
-        unicode_set = set()
+        unicode_arr = []
 
         start = end = "*"
         for code in unicode:
@@ -74,11 +74,14 @@ class TestGenerator(object):
                 start = end = hex(int(values[0], 16))
                 continue
 
-            # append start, end into unicode_set
+            # append start, end into unicode_arr
             if hex(int(end, 16)+1) != hex(int(values[0], 16)):
                 # print current start, end
-                unicode_set.add(start)
-                unicode_set.add(end)
+                if start == end:
+                    unicode_arr.append(start)
+                else:
+                    unicode_arr.append(start)
+                    unicode_arr.append(end)
                 start = hex(int(values[0], 16))
 
             if len(values) == 1:
@@ -88,11 +91,14 @@ class TestGenerator(object):
             else:
                 raise Exception("Unicode Text should only contains 1 or 2 values. Please check the text.")
 
-        unicode_set.add(start)
-        unicode_set.add(end)
+        if start == end:
+            unicode_arr.append(start)
+        else:
+            unicode_arr.append(start)
+            unicode_arr.append(end)
 
         printer.increaseIndent()
-        for code in unicode_set:
+        for code in unicode_arr:
             printer.writeWithEnd(code, ",")
         printer.decreaseIndent()
         printer.writeNewLine()
