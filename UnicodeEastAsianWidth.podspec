@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'UnicodeEastAsianWidth'
-  s.version          = '1.0.0'
+  s.version          = '1.0.1'
   s.summary          = 'Transfer to check Unicode EastAsianWidth by Swift'
 
 # This description is used to generate tags and improve search results.
