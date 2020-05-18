@@ -8,7 +8,7 @@
 import Foundation
 
 public extension UnicodeScalar {
-    public var isEastAsianFullwidth: Bool {
+    var isEastAsianFullwidth: Bool {
         switch self.value {
         case 0x3000...0x3000: return true
         case 0xff01...0xff60: return true
@@ -17,7 +17,7 @@ public extension UnicodeScalar {
         }
     }
 
-    public var isEastAsianHalfwidth: Bool {
+    var isEastAsianHalfwidth: Bool {
         switch self.value {
         case 0x20a9...0x20a9: return true
         case 0xff61...0xffbe: return true
@@ -30,7 +30,7 @@ public extension UnicodeScalar {
         }
     }
 
-    public var isEastAsianWide: Bool {
+    var isEastAsianWide: Bool {
         switch self.value {
         case 0x1100...0x115f: return true
         case 0x231a...0x231b: return true
@@ -150,7 +150,7 @@ public extension UnicodeScalar {
         }
     }
 
-    public var isEastAsianNarrow: Bool {
+    var isEastAsianNarrow: Bool {
         switch self.value {
         case 0x20...0x7e: return true
         case 0xa2...0xa3: return true
@@ -163,7 +163,7 @@ public extension UnicodeScalar {
         }
     }
 
-    public var isEastAsianAmbiguous: Bool {
+    var isEastAsianAmbiguous: Bool {
         switch self.value {
         case 0xa1...0xa1: return true
         case 0xa4...0xa4: return true
@@ -348,7 +348,7 @@ public extension UnicodeScalar {
         }
     }
 
-    public var isEastAsianNeutral: Bool {
+    var isEastAsianNeutral: Bool {
         switch self.value {
         case 0x0...0x1f: return true
         case 0x7f...0xa0: return true

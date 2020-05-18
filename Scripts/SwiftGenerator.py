@@ -29,27 +29,27 @@ class SwiftGenerator(object):
         printer.write("}")
 
     def __generate_fullWidth(self, printer):
-        printer.write("public var isEastAsianFullwidth: Bool {")
+        printer.write("var isEastAsianFullwidth: Bool {")
         self.__generate_base(printer, self.fullWidth)
 
     def __generate_halfWidth(self, printer):
-        printer.write("public var isEastAsianHalfwidth: Bool {")
+        printer.write("var isEastAsianHalfwidth: Bool {")
         self.__generate_base(printer, self.halfWidth)
 
     def __generate_wide(self, printer):
-        printer.write("public var isEastAsianWide: Bool {")
+        printer.write("var isEastAsianWide: Bool {")
         self.__generate_base(printer, self.wide)
 
     def __generate_narrow(self, printer):
-        printer.write("public var isEastAsianNarrow: Bool {")
+        printer.write("var isEastAsianNarrow: Bool {")
         self.__generate_base(printer, self.narrow)
 
     def __generate_ambiguous(self, printer):
-        printer.write("public var isEastAsianAmbiguous: Bool {")
+        printer.write("var isEastAsianAmbiguous: Bool {")
         self.__generate_base(printer, self.ambiguous)
 
     def __generate_neutral(self, printer):
-        printer.write("public var isEastAsianNeutral: Bool {")
+        printer.write("var isEastAsianNeutral: Bool {")
         self.__generate_base(printer, self.neutral)
 
     def __generate_base(self, printer, unicode):
