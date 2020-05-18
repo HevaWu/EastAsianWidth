@@ -1,5 +1,5 @@
 // 
-// UnicodeScalar+Extension.swift
+// EdgeCharacters+Generated.swift
 // He Wu
 // 
 // Copyright © 2020 He Wu. All rights reserved.

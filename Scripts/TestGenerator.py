@@ -108,7 +108,7 @@ class TestGenerator(object):
     def __generateHeader(self, printer):
         # Generate Header
         printer.write("// ")
-        printer.write("// UnicodeScalar+Extension.swift")
+        printer.write("// EdgeCharacters+Generated.swift")
         printer.write("// He Wu")
         printer.write("// ")
         printer.write("// Copyright © {} He Wu. All rights reserved.".format(printer.curYear))
