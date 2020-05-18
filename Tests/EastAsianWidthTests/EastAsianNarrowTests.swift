@@ -25,4 +25,10 @@ class EastAsianNarrowTests: XCTestCase {
         XCTAssertFalse("！？".containsEastAsianNarrowCharacters)
         XCTAssertFalse("あいうえお".containsEastAsianNarrowCharacters)
     }
+
+    static var allTests = [
+        ("testEdgeCases", testEdgeCases),
+        ("testNonEastAsianNarrowCharacters", testNonEastAsianNarrowCharacters),
+        ("testContainsEastAsianNarrow", testContainsEastAsianNarrow)
+    ]
 }

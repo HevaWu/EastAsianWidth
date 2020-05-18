@@ -27,4 +27,10 @@ class EastAsianNeutralTests: XCTestCase {
         XCTAssertFalse("ＡＢＣ".containsEastAsianNeutralCharacters)
         XCTAssertFalse("あいうえお".containsEastAsianNeutralCharacters)
     }
+
+    static var allTests = [
+        ("testEdgeCases", testEdgeCases),
+        ("testNonEastAsianNeutralCharacters", testNonEastAsianNeutralCharacters),
+        ("testContainsEastAsianNeutral", testContainsEastAsianNeutral)
+    ]
 }

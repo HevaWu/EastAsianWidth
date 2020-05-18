@@ -25,4 +25,10 @@ class EastAsianWideTests: XCTestCase {
         XCTAssertTrue("你好".containsEastAsianWideCharacters)
         XCTAssertTrue("안녕하세요".containsEastAsianWideCharacters)
     }
+
+    static var allTests = [
+        ("testEdgeCases", testEdgeCases),
+        ("testNonEastAsianWideCharacters", testNonEastAsianWideCharacters),
+        ("testContainsEastAsianWide", testContainsEastAsianWide)
+    ]
 }

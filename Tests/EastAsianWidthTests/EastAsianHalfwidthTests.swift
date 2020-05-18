@@ -26,4 +26,10 @@ class EastAsianHalfwidthTests: XCTestCase {
         XCTAssertTrue("100 ₩".containsEastAsianHalfwidthCharacters)
         XCTAssertFalse("あいうえお".containsEastAsianHalfwidthCharacters)
     }
+
+    static var allTests = [
+        ("testEdgeCases", testEdgeCases),
+        ("testNonEastAsianHalfwidthCharacters", testNonEastAsianHalfwidthCharacters),
+        ("testContainsEastAsianHalfwidth", testContainsEastAsianHalfwidth)
+    ]
 }

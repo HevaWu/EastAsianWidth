@@ -57,4 +57,12 @@ class HalfwidthTests: XCTestCase {
     func testHalfwidthHangul() {
         AssertHalfwidth("ﾡﾢﾣﾤﾥﾦﾧﾨﾩﾪﾫﾬﾭﾮﾯﾰﾱﾲﾳﾴﾵﾶﾷﾸﾹﾺﾻﾼﾽﾾￂￃￄￅￆￇￊￋￌￍￎￏￒￓￔￕￖￗￚￛￜ")
     }
+
+    static var allTests = [
+        ("testEdgeCases", testEdgeCases),
+        ("testNonHalfwidthCharacters", testNonHalfwidthCharacters),
+        ("testContainsHalfwidth", testContainsHalfwidth),
+        ("testHalfwidthKatakana", testHalfwidthKatakana),
+        ("testHalfwidthHangul", testHalfwidthHangul)
+    ]
 }

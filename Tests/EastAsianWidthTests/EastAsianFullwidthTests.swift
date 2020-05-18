@@ -29,4 +29,10 @@ class EastAsianFullwidthTests: XCTestCase {
         XCTAssertTrue("こんにちわ　世界".containsEastAsianFullwidthCharacters)
         XCTAssertFalse("こんにちわ 世界".containsEastAsianFullwidthCharacters)
     }
+
+    static var allTests = [
+        ("testEdgeCases", testEdgeCases),
+        ("testNonEastAsianFullwidthCharacters", testNonEastAsianFullwidthCharacters),
+        ("testContainsAsianFullwidth", testContainsAsianFullwidth)
+    ]
 }

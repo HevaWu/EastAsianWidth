@@ -38,4 +38,10 @@ class FullwidthTests: XCTestCase {
         XCTAssertTrue("你好".containsFullwidthOrAmbiguousCharacters)
         XCTAssertTrue("안녕하세요".containsFullwidthOrAmbiguousCharacters)
     }
+
+    static var allTests = [
+        ("testEdgeCases", testEdgeCases),
+        ("testNonFullwidthCharacters", testNonFullwidthCharacters),
+        ("testContainsFullwidth", testContainsFullwidth)
+    ]
 }
