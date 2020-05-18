@@ -61,7 +61,10 @@ class SwiftGenerator(object):
             values = code.split("..")
 
             if start == "*":
-                start = end = hex(int(values[0], 16))
+                start = hex(int(values[0], 16))
+                if len(values) == 1: end = start
+                elif len(values) == 2: end = hex(int(values[1], 16))
+                else: raise Exception("Unicode Text should only contains 1 or 2 values. Please check the text.")
                 continue
 
             if hex(int(end, 16)+1) != hex(int(values[0], 16)):

@@ -32,7 +32,7 @@ public extension UnicodeScalar {
 
     public var isEastAsianWide: Bool {
         switch self.value {
-        case 0x1100...0x1100: return true
+        case 0x1100...0x115f: return true
         case 0x231a...0x231b: return true
         case 0x2329...0x232a: return true
         case 0x23e9...0x23ec: return true
@@ -350,7 +350,7 @@ public extension UnicodeScalar {
 
     public var isEastAsianNeutral: Bool {
         switch self.value {
-        case 0x0...0x0: return true
+        case 0x0...0x1f: return true
         case 0x7f...0xa0: return true
         case 0xa9...0xa9: return true
         case 0xab...0xab: return true
