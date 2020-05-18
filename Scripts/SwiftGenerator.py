@@ -91,7 +91,7 @@ class SwiftGenerator(object):
         printer.write("// UnicodeScalar+Extension.swift")
         printer.write("// He Wu")
         printer.write("// ")
-        printer.write("// Copyright © 2020 He Wu. All rights reserved.")
+        printer.write("// Copyright © {} He Wu. All rights reserved.".format(printer.curYear))
         printer.write("// ")
         printer.writeNewLine()
 

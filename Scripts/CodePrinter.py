@@ -1,5 +1,9 @@
+import datetime
+
 # Printer of Swift code
 class CodePrinter(object):
+    curYear = datetime.datetime.now().year
+    
     def __init__(self):
         super().__init__()
         self.__depth = 0
