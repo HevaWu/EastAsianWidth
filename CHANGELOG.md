@@ -4,6 +4,7 @@
 
 - Unify code generating python scripts.
 - Update some test cases.
+- Set pods deployment target to 9.0.
 
 ### Removed
 
