@@ -98,6 +98,7 @@ class TestGenerator(object):
             unicode_arr.append(end)
 
         printer.increaseIndent()
+        printer.writeWithEnd(printer.tabStr, "")
         for code in unicode_arr:
             printer.writeWithEnd(code, ",")
         printer.decreaseIndent()

@@ -3,14 +3,14 @@ import datetime
 # Printer of Swift code
 class CodePrinter(object):
     curYear = datetime.datetime.now().year
+    tabStr = "    "
     
     def __init__(self):
         super().__init__()
         self.__depth = 0
-        self.__tabStr = "    "
 
     def write(self, str):
-        print(self.__tabStr * self.__depth + str)
+        print(self.tabStr * self.__depth + str)
 
     def writeWithEnd(self, str, end):
         print(str, end=end)
