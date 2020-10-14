@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'UnicodeEastAsianWidth'
-  s.version          = '1.1.0'
+  s.version          = '1.2.0'
   s.summary          = 'Transfer to check Unicode EastAsianWidth by Swift'
 
 # This description is used to generate tags and improve search results.
@@ -26,9 +26,9 @@ Pod::Spec.new do |s|
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'He Wu(HevaWu)' => 'hewu9375@gmail.com' }
   s.source           = { :git => 'https://github.com/HevaWu/EastAsianWidth.git', :tag => s.version.to_s }
-  s.social_media_url = 'https://twitter.com/hewu9375'
+  s.social_media_url = 'https://www.facebook.com/hevawu'
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '9.0'
 
   s.source_files = 'Sources/EastAsianWidth/*'
 
