@@ -1,4 +1,4 @@
-## [v1.2.0](https://github.com/HevaWu/EastAsianWidth/releases/tag/v1.2.0)
+## [v1.2.0](https://github.com/HevaWu/EastAsianWidth/releases/tag/1.2.0)
 
 ### Changed
 
@@ -10,19 +10,19 @@
 
 - Script `generate_test.py` which will be merge into `generate.py`
 
-## [v1.1.0](https://github.com/HevaWu/EastAsianWidth/releases/tag/v1.1.0)
+## [v1.1.0](https://github.com/HevaWu/EastAsianWidth/releases/tag/1.1.0)
 
 ### Changed
 
 - Fixing code format.
 
-## [v1.0.1](https://github.com/HevaWu/EastAsianWidth/releases/tag/v1.0.1)
+## [v1.0.1](https://github.com/HevaWu/EastAsianWidth/releases/tag/1.0.1)
 
 ### Changed
 
 - Include some code format fixing.
 
-## [v1.0.0](https://github.com/HevaWu/EastAsianWidth/releases/tag/v1.0.0)
+## [v1.0.0](https://github.com/HevaWu/EastAsianWidth/releases/tag/1.0.0)
 
 ### Added
 
