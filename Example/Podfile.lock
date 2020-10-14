@@ -11,13 +11,13 @@ PODS:
     - FBSnapshotTestCase (~> 2.0)
     - Nimble (~> 7.0)
   - Quick (1.2.0)
-  - UnicodeEastAsianWidth (1.0.0)
+  - UnicodeEastAsianWidth (1.2.0)
 
 DEPENDENCIES:
-  - FBSnapshotTestCase (~> 2.1.4)
-  - Nimble (~> 7.0)
-  - Nimble-Snapshots (~> 6.3.0)
-  - Quick (~> 1.2.0)
+  - FBSnapshotTestCase
+  - Nimble
+  - Nimble-Snapshots
+  - Quick
   - UnicodeEastAsianWidth (from `../`)
 
 SPEC REPOS:
@@ -36,8 +36,8 @@ SPEC CHECKSUMS:
   Nimble: 051e3d8912d40138fa5591c78594f95fb172af37
   Nimble-Snapshots: f5459b5b091678dc942d03ec4741cacb58ba4a52
   Quick: 58d203b1c5e27fff7229c4c1ae445ad7069a7a08
-  UnicodeEastAsianWidth: cc9c88c1430dfbd78762432124fb680491a244ba
+  UnicodeEastAsianWidth: 9bfad52e34de7e029d5bdf579687ed1d9504de74
 
-PODFILE CHECKSUM: 18efa17dbd1eca1a9cbdc56570efb1f3cd626881
+PODFILE CHECKSUM: fdc413e057f748a982d91c52eb071f35ea2298de
 
 COCOAPODS: 1.9.1
