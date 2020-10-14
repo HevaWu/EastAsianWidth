@@ -8,6 +8,7 @@
 import XCTest
 import EastAsianWidth
 
+// https://github.com/ukitaka/EastAsianWidth.swift/blob/master/Tests/EastAsianWidthTests/TestUtils.swift
 class HalfwidthTests: XCTestCase {
     func testEdgeCases() {
         EastAsianNarrowEdgeUnicodeScalar.forEach(AssertHalfwidth)

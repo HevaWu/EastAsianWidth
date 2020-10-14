@@ -28,6 +28,7 @@ class EastAsianFullwidthTests: XCTestCase {
         XCTAssertFalse(" ".containsEastAsianFullwidthCharacters) // Halfwidth space
         XCTAssertTrue("こんにちわ　世界".containsEastAsianFullwidthCharacters)
         XCTAssertFalse("こんにちわ 世界".containsEastAsianFullwidthCharacters)
+        XCTAssertTrue("ＨＥＬＬＯＷＯＲＬＤ".containsEastAsianFullwidthCharacters)
     }
 
     static var allTests = [

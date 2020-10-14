@@ -8,7 +8,7 @@
 import XCTest
 import EastAsianWidth
 
-// https://github.com/ukitaka/EastAsianWidth.swift/blob/master/Tests/EastAsianWidthTests/EastAsianAmbiguousTests.swift
+// https://github.com/ukitaka/EastAsianWidth.swift/blob/master/Tests/EastAsianWidthTests/TestUtils.swift
 final class EastAsianAmbiguousTests: XCTestCase {
     func testEdgeCases() {
         EastAsianAmbiguousEdgeUnicodeScalar.forEach(AssertEastAsianAmbiguous)
@@ -23,7 +23,8 @@ final class EastAsianAmbiguousTests: XCTestCase {
 
     func testContainsEastAsianAmbiguous() {
         XCTAssertTrue("¡".containsEastAsianAmbiguousCharacters) // Not `i`, but `¡`.
-        XCTAssertFalse("Hello".containsEastAsianAmbiguousCharacters)
+        // 0x16b
+        XCTAssertTrue("ū".containsEastAsianAmbiguousCharacters)
     }
 
     static var allTests = [

@@ -8,24 +8,24 @@
 import XCTest
 import EastAsianWidth
 
-//https://github.com/ukitaka/EastAsianWidth.swift/blob/master/Tests/EastAsianWidthTests/EastAsianAmbiguousTests.swift
+// https://github.com/ukitaka/EastAsianWidth.swift/blob/master/Tests/EastAsianWidthTests/TestUtils.swift
 final class CountByEastAsianWidthTests: XCTestCase {
     func testCountByEastAsianWidth() {
-        // default config
+        XCTAssertEqual("你好".unicodeScalars.countByEastAsianWidth(), 4)
         XCTAssertEqual("あいうえお".unicodeScalars.countByEastAsianWidth(), 10)
-        XCTAssertEqual("aiueo".unicodeScalars.countByEastAsianWidth(), 5)
+        XCTAssertEqual("アイウエオ".unicodeScalars.countByEastAsianWidth(), 10)
         XCTAssertEqual("あいうえおｱｲｳｴｵ".unicodeScalars.countByEastAsianWidth(), 15)
-        XCTAssertEqual("ABCｱｲｳｴｵ".unicodeScalars.countByEastAsianWidth(), 8)
-        //includes East Asian Ambiguous character.
-        XCTAssertEqual("ABCｱｲｳｴｵ¡".unicodeScalars.countByEastAsianWidth(), 9)
+        XCTAssertEqual("アイウエオあいうえお".unicodeScalars.countByEastAsianWidth(), 20)
 
-        // custom config
-        XCTAssertEqual("あいうえお".unicodeScalars.countByEastAsianWidth(halfwidthAs: 1, fullwidthAs: 2, markEastAsianAmbiguousAsFullwidth: true), 10)
-        XCTAssertEqual("ABCｱｲｳｴｵ¡".unicodeScalars.countByEastAsianWidth(halfwidthAs: 1, fullwidthAs: 2, markEastAsianAmbiguousAsFullwidth: true), 10)
+        XCTAssertEqual("aiueo".unicodeScalars.countByEastAsianWidth(), 5)
+        XCTAssertEqual("ABCDEFGｱｲｳｴｵ".unicodeScalars.countByEastAsianWidth(), 12)
+        XCTAssertEqual("ABCｱｲｳｴｵabcdefg".unicodeScalars.countByEastAsianWidth(),15)
+        XCTAssertEqual("你好ABCD".unicodeScalars.countByEastAsianWidth(),8)
 
-        XCTAssertEqual("あいうえお".unicodeScalars.countByEastAsianWidth(halfwidthAs: 2, fullwidthAs: 4), 20)
-        XCTAssertEqual("aiueo".unicodeScalars.countByEastAsianWidth(halfwidthAs: 1, fullwidthAs: 3), 5)
-        XCTAssertEqual("あいうえおｱｲｳｴｵ".unicodeScalars.countByEastAsianWidth(halfwidthAs: 1, fullwidthAs: 3), 20)
+        XCTAssertEqual("aiueo".unicodeScalars.countByEastAsianWidth(halfwidthAs: 2, fullwidthAs: 4), 10)
+        XCTAssertEqual("ABCDEFGｱｲｳｴｵ你好".unicodeScalars.countByEastAsianWidth(halfwidthAs: 2, fullwidthAs: 3), 30)
+        XCTAssertEqual("ABCｱｲｳｴｵabcdefg你好".unicodeScalars.countByEastAsianWidth(halfwidthAs: 1, fullwidthAs: 3), 21)
+        XCTAssertEqual("你好ABCDE".unicodeScalars.countByEastAsianWidth(halfwidthAs: 1, fullwidthAs: 4), 13)
     }
 
     static var allTests = [
