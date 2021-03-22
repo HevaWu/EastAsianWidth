@@ -7,7 +7,7 @@
 #
 
 Pod::Spec.new do |s|
-  s.name             = 'UnicodeEastAsianWidth'
+  s.name             = 'EastAsianWidth'
   s.version          = '2.0.0'
   s.summary          = 'Transfer to check Unicode EastAsianWidth by Swift'
 
