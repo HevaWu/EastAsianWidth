@@ -17,23 +17,23 @@ public extension UnicodeScalar {
     ///
     /// https://unicode.org/reports/tr11/#Recommendations
 
-    public var isFullwidth: Bool {
+    var isFullwidth: Bool {
         return isEastAsianFullwidth
             || isEastAsianWide
     }
 
-    public var isFullwidthOrAmbiguous: Bool {
+    var isFullwidthOrAmbiguous: Bool {
         return isFullwidth
             || isEastAsianAmbiguous
     }
 
-    public var isHalfwidth: Bool {
+    var isHalfwidth: Bool {
         return isEastAsianHalfwidth
             || isEastAsianNarrow
             || isEastAsianNeutral
     }
 
-    public var isHalfwidthOrAmbiguous: Bool {
+    var isHalfwidthOrAmbiguous: Bool {
         return isHalfwidth
             || isEastAsianAmbiguous
     }
