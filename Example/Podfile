@@ -1,7 +1,7 @@
 use_frameworks!
 
 target 'UnicodeEastAsianWidth_Example' do
-  pod 'EastAsianWidth', :path => '../'
+  pod 'UnicodeEastAsianWidth', :path => '../'
 
   target 'UnicodeEastAsianWidth_Tests' do
     inherit! :search_paths
