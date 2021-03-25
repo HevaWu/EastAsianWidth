@@ -39,9 +39,18 @@ class FullwidthTests: XCTestCase {
         XCTAssertTrue("안녕하세요".containsFullwidthOrAmbiguousCharacters)
     }
 
+    func testFullwidthHalfwidthCount() {
+       XCTAssertEqual("ABC".fullwidthHalfwidthCount, 3)
+       XCTAssertEqual("(^o^)".fullwidthHalfwidthCount, 5)
+       XCTAssertEqual("あいうえお".fullwidthHalfwidthCount, 10)
+       XCTAssertEqual("漢字".fullwidthHalfwidthCount, 4)
+       XCTAssertEqual("mix混合".fullwidthHalfwidthCount, 7)
+    }
+
     static var allTests = [
         ("testEdgeCases", testEdgeCases),
         ("testNonFullwidthCharacters", testNonFullwidthCharacters),
-        ("testContainsFullwidth", testContainsFullwidth)
+        ("testContainsFullwidth", testContainsFullwidth),
+        ("testFullwidthHalfwidthCount", testFullwidthHalfwidthCount)
     ]
 }

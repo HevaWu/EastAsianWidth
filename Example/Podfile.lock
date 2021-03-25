@@ -1,4 +1,5 @@
 PODS:
+  - EastAsianWidth (2.0.0)
   - FBSnapshotTestCase (2.1.4):
     - FBSnapshotTestCase/SwiftSupport (= 2.1.4)
   - FBSnapshotTestCase/Core (2.1.4)
@@ -11,14 +12,13 @@ PODS:
     - FBSnapshotTestCase (~> 2.0)
     - Nimble (~> 7.0)
   - Quick (1.2.0)
-  - UnicodeEastAsianWidth (1.2.0)
 
 DEPENDENCIES:
+  - EastAsianWidth (from `../`)
   - FBSnapshotTestCase
   - Nimble
   - Nimble-Snapshots
   - Quick
-  - UnicodeEastAsianWidth (from `../`)
 
 SPEC REPOS:
   trunk:
@@ -28,16 +28,16 @@ SPEC REPOS:
     - Quick
 
 EXTERNAL SOURCES:
-  UnicodeEastAsianWidth:
+  EastAsianWidth:
     :path: "../"
 
 SPEC CHECKSUMS:
+  EastAsianWidth: fe671a163e43e8a2088204f6fe1aff5993ef2657
   FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
   Nimble: 051e3d8912d40138fa5591c78594f95fb172af37
   Nimble-Snapshots: f5459b5b091678dc942d03ec4741cacb58ba4a52
   Quick: 58d203b1c5e27fff7229c4c1ae445ad7069a7a08
-  UnicodeEastAsianWidth: 9bfad52e34de7e029d5bdf579687ed1d9504de74
 
-PODFILE CHECKSUM: fdc413e057f748a982d91c52eb071f35ea2298de
+PODFILE CHECKSUM: 95c13ee869ba9aa3ae85ce1b0b3dd359dbb3f801
 
-COCOAPODS: 1.9.1
+COCOAPODS: 1.10.1
