@@ -2,7 +2,7 @@
 // UnicodeScalar+Generated.swift
 // He Wu
 // 
-// Copyright © 2020 He Wu. All rights reserved.
+// Copyright © 2021 He Wu. All rights reserved.
 // 
 
 import Foundation

@@ -25,42 +25,42 @@ class TestGenerator(object):
         printer.write("let EastAsianFullwidthEdgeRawScalarValue: [UInt32] = [")
         self.__generate_base(printer, self.fullWidth)
 
-        printer.write("let EastAsianFullwidthEdgeUnicodeScalar: [UnicodeScalar] = EastAsianFullwidthEdgeRawScalarValue.flatMap(UnicodeScalar.init)")
+        printer.write("let EastAsianFullwidthEdgeUnicodeScalar: [UnicodeScalar] = EastAsianFullwidthEdgeRawScalarValue.compactMap(UnicodeScalar.init)")
         printer.writeNewLine()
 
     def __generate_halfwidth(self, printer):
         printer.write("let EastAsianHalfwidthEdgeRawScalarValue: [UInt32] = [")
         self.__generate_base(printer, self.halfWidth)
 
-        printer.write("let EastAsianHalfwidthEdgeUnicodeScalar: [UnicodeScalar] = EastAsianHalfwidthEdgeRawScalarValue.flatMap(UnicodeScalar.init)")
+        printer.write("let EastAsianHalfwidthEdgeUnicodeScalar: [UnicodeScalar] = EastAsianHalfwidthEdgeRawScalarValue.compactMap(UnicodeScalar.init)")
         printer.writeNewLine()
 
     def __generate_wide(self, printer):
         printer.write("let EastAsianWideEdgeRawScalarValue: [UInt32] = [")
         self.__generate_base(printer, self.wide)
 
-        printer.write("let EastAsianWideEdgeUnicodeScalar: [UnicodeScalar] = EastAsianWideEdgeRawScalarValue.flatMap(UnicodeScalar.init)")
+        printer.write("let EastAsianWideEdgeUnicodeScalar: [UnicodeScalar] = EastAsianWideEdgeRawScalarValue.compactMap(UnicodeScalar.init)")
         printer.writeNewLine()
 
     def __generate_narrow(self, printer):
         printer.write("let EastAsianNarrowEdgeRawScalarValue: [UInt32] = [")
         self.__generate_base(printer, self.narrow)
 
-        printer.write("let EastAsianNarrowEdgeUnicodeScalar: [UnicodeScalar] = EastAsianNarrowEdgeRawScalarValue.flatMap(UnicodeScalar.init)")
+        printer.write("let EastAsianNarrowEdgeUnicodeScalar: [UnicodeScalar] = EastAsianNarrowEdgeRawScalarValue.compactMap(UnicodeScalar.init)")
         printer.writeNewLine()
 
     def __generate_ambiguous(self, printer):
         printer.write("let EastAsianAmbiguousEdgeRawScalarValue: [UInt32] = [")
         self.__generate_base(printer, self.ambiguous)
 
-        printer.write("let EastAsianAmbiguousEdgeUnicodeScalar: [UnicodeScalar] = EastAsianAmbiguousEdgeRawScalarValue.flatMap(UnicodeScalar.init)")
+        printer.write("let EastAsianAmbiguousEdgeUnicodeScalar: [UnicodeScalar] = EastAsianAmbiguousEdgeRawScalarValue.compactMap(UnicodeScalar.init)")
         printer.writeNewLine()
 
     def __generate_neutral(self, printer):
         printer.write("let EastAsianNeutralEdgeRawScalarValue: [UInt32] = [")
         self.__generate_base(printer, self.neutral)
 
-        printer.write("let EastAsianNeutralEdgeUnicodeScalar: [UnicodeScalar] = EastAsianNeutralEdgeRawScalarValue.flatMap(UnicodeScalar.init)")
+        printer.write("let EastAsianNeutralEdgeUnicodeScalar: [UnicodeScalar] = EastAsianNeutralEdgeRawScalarValue.compactMap(UnicodeScalar.init)")
         printer.writeNewLine()
 
     def __generate_base(self, printer, unicode):
