@@ -1,11 +1,16 @@
-## [v1.2.0](https://github.com/HevaWu/EastAsianWidth/releases/tag/1.2.0)
+## [v2.0.0](https://github.com/HevaWu/EastAsianWidth/releases/tag/2.0.0)
 
+### Changed
+
+- Add fullwidthHalfwidthCount string extension
+- Update TestGenerator
+
+## [v1.2.0](https://github.com/HevaWu/EastAsianWidth/releases/tag/1.2.0)
 ### Changed
 
 - Unify code generating python scripts.
 - Update some test cases.
 - Set pods deployment target to 9.0.
-
 ### Removed
 
 - Script `generate_test.py` which will be merge into `generate.py`
