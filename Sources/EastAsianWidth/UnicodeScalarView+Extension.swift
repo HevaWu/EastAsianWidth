@@ -8,7 +8,7 @@
 import Foundation
 
 public extension String.UnicodeScalarView {
-    public func countByEastAsianWidth(halfwidthAs: Int = 1,
+    func countByEastAsianWidth(halfwidthAs: Int = 1,
                                       fullwidthAs: Int = 2,
                                       markEastAsianAmbiguousAsFullwidth: Bool = false) -> Int {
 

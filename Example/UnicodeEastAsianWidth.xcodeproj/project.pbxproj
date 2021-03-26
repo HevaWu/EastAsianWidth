@@ -291,11 +291,11 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-UnicodeEastAsianWidth_Example/Pods-UnicodeEastAsianWidth_Example-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/UnicodeEastAsianWidth/UnicodeEastAsianWidth.framework",
+				"${BUILT_PRODUCTS_DIR}/UnicodeEastAsianWidth/EastAsianWidth.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UnicodeEastAsianWidth.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EastAsianWidth.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
