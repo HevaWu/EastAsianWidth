@@ -94,7 +94,10 @@ public extension UnicodeScalar {
         case 0x17000...0x187f7: return true
         case 0x18800...0x18cd5: return true
         case 0x18d00...0x18d08: return true
-        case 0x1b000...0x1b11e: return true
+        case 0x1aff0...0x1aff3: return true
+        case 0x1aff5...0x1affb: return true
+        case 0x1affd...0x1affe: return true
+        case 0x1b000...0x1b122: return true
         case 0x1b150...0x1b152: return true
         case 0x1b164...0x1b167: return true
         case 0x1b170...0x1b2fb: return true
@@ -129,21 +132,23 @@ public extension UnicodeScalar {
         case 0x1f6cc...0x1f6cc: return true
         case 0x1f6d0...0x1f6d2: return true
         case 0x1f6d5...0x1f6d7: return true
+        case 0x1f6dd...0x1f6df: return true
         case 0x1f6eb...0x1f6ec: return true
         case 0x1f6f4...0x1f6fc: return true
         case 0x1f7e0...0x1f7eb: return true
+        case 0x1f7f0...0x1f7f0: return true
         case 0x1f90c...0x1f93a: return true
         case 0x1f93c...0x1f945: return true
-        case 0x1f947...0x1f978: return true
-        case 0x1f97a...0x1f9cb: return true
-        case 0x1f9cd...0x1f9ff: return true
+        case 0x1f947...0x1f9ff: return true
         case 0x1fa70...0x1fa74: return true
-        case 0x1fa78...0x1fa7a: return true
+        case 0x1fa78...0x1fa7c: return true
         case 0x1fa80...0x1fa86: return true
-        case 0x1fa90...0x1faa8: return true
-        case 0x1fab0...0x1fab6: return true
-        case 0x1fac0...0x1fac2: return true
-        case 0x1fad0...0x1fad6: return true
+        case 0x1fa90...0x1faac: return true
+        case 0x1fab0...0x1faba: return true
+        case 0x1fac0...0x1fac5: return true
+        case 0x1fad0...0x1fad9: return true
+        case 0x1fae0...0x1fae7: return true
+        case 0x1faf0...0x1faf6: return true
         case 0x20000...0x2fffd: return true
         case 0x30000...0x3fffd: return true
         default: return false
@@ -419,8 +424,7 @@ public extension UnicodeScalar {
         case 0x591...0x5c7: return true
         case 0x5d0...0x5ea: return true
         case 0x5ef...0x5f4: return true
-        case 0x600...0x61c: return true
-        case 0x61e...0x70d: return true
+        case 0x600...0x70d: return true
         case 0x70f...0x74a: return true
         case 0x74d...0x7b1: return true
         case 0x7c0...0x7fa: return true
@@ -429,9 +433,9 @@ public extension UnicodeScalar {
         case 0x840...0x85b: return true
         case 0x85e...0x85e: return true
         case 0x860...0x86a: return true
-        case 0x8a0...0x8b4: return true
-        case 0x8b6...0x8c7: return true
-        case 0x8d3...0x983: return true
+        case 0x870...0x88e: return true
+        case 0x890...0x891: return true
+        case 0x898...0x983: return true
         case 0x985...0x98c: return true
         case 0x98f...0x990: return true
         case 0x993...0x9a8: return true
@@ -509,11 +513,12 @@ public extension UnicodeScalar {
         case 0xc0e...0xc10: return true
         case 0xc12...0xc28: return true
         case 0xc2a...0xc39: return true
-        case 0xc3d...0xc44: return true
+        case 0xc3c...0xc44: return true
         case 0xc46...0xc48: return true
         case 0xc4a...0xc4d: return true
         case 0xc55...0xc56: return true
         case 0xc58...0xc5a: return true
+        case 0xc5d...0xc5d: return true
         case 0xc60...0xc63: return true
         case 0xc66...0xc6f: return true
         case 0xc77...0xc8c: return true
@@ -525,7 +530,7 @@ public extension UnicodeScalar {
         case 0xcc6...0xcc8: return true
         case 0xcca...0xccd: return true
         case 0xcd5...0xcd6: return true
-        case 0xcde...0xcde: return true
+        case 0xcdd...0xcde: return true
         case 0xce0...0xce3: return true
         case 0xce6...0xcef: return true
         case 0xcf1...0xcf2: return true
@@ -593,9 +598,8 @@ public extension UnicodeScalar {
         case 0x13f8...0x13fd: return true
         case 0x1400...0x169c: return true
         case 0x16a0...0x16f8: return true
-        case 0x1700...0x170c: return true
-        case 0x170e...0x1714: return true
-        case 0x1720...0x1736: return true
+        case 0x1700...0x1715: return true
+        case 0x171f...0x1736: return true
         case 0x1740...0x1753: return true
         case 0x1760...0x176c: return true
         case 0x176e...0x1770: return true
@@ -603,8 +607,7 @@ public extension UnicodeScalar {
         case 0x1780...0x17dd: return true
         case 0x17e0...0x17e9: return true
         case 0x17f0...0x17f9: return true
-        case 0x1800...0x180e: return true
-        case 0x1810...0x1819: return true
+        case 0x1800...0x1819: return true
         case 0x1820...0x1878: return true
         case 0x1880...0x18aa: return true
         case 0x18b0...0x18f5: return true
@@ -623,9 +626,9 @@ public extension UnicodeScalar {
         case 0x1a7f...0x1a89: return true
         case 0x1a90...0x1a99: return true
         case 0x1aa0...0x1aad: return true
-        case 0x1ab0...0x1ac0: return true
-        case 0x1b00...0x1b4b: return true
-        case 0x1b50...0x1b7c: return true
+        case 0x1ab0...0x1ace: return true
+        case 0x1b00...0x1b4c: return true
+        case 0x1b50...0x1b7e: return true
         case 0x1b80...0x1bf3: return true
         case 0x1bfc...0x1c37: return true
         case 0x1c3b...0x1c49: return true
@@ -633,8 +636,7 @@ public extension UnicodeScalar {
         case 0x1c90...0x1cba: return true
         case 0x1cbd...0x1cc7: return true
         case 0x1cd0...0x1cfa: return true
-        case 0x1d00...0x1df9: return true
-        case 0x1dfb...0x1f15: return true
+        case 0x1d00...0x1f15: return true
         case 0x1f18...0x1f1d: return true
         case 0x1f20...0x1f45: return true
         case 0x1f48...0x1f4d: return true
@@ -669,7 +671,7 @@ public extension UnicodeScalar {
         case 0x2090...0x209c: return true
         case 0x20a0...0x20a8: return true
         case 0x20aa...0x20ab: return true
-        case 0x20ad...0x20bf: return true
+        case 0x20ad...0x20c0: return true
         case 0x20d0...0x20f0: return true
         case 0x2100...0x2102: return true
         case 0x2104...0x2104: return true
@@ -783,9 +785,7 @@ public extension UnicodeScalar {
         case 0x2b51...0x2b54: return true
         case 0x2b5a...0x2b73: return true
         case 0x2b76...0x2b95: return true
-        case 0x2b97...0x2c2e: return true
-        case 0x2c30...0x2c5e: return true
-        case 0x2c60...0x2cf3: return true
+        case 0x2b97...0x2cf3: return true
         case 0x2cf9...0x2d25: return true
         case 0x2d27...0x2d27: return true
         case 0x2d2d...0x2d2d: return true
@@ -800,14 +800,16 @@ public extension UnicodeScalar {
         case 0x2dc8...0x2dce: return true
         case 0x2dd0...0x2dd6: return true
         case 0x2dd8...0x2dde: return true
-        case 0x2de0...0x2e52: return true
+        case 0x2de0...0x2e5d: return true
         case 0x303f...0x303f: return true
         case 0x4dc0...0x4dff: return true
         case 0xa4d0...0xa62b: return true
         case 0xa640...0xa6f7: return true
-        case 0xa700...0xa7bf: return true
-        case 0xa7c2...0xa7ca: return true
-        case 0xa7f5...0xa82c: return true
+        case 0xa700...0xa7ca: return true
+        case 0xa7d0...0xa7d1: return true
+        case 0xa7d3...0xa7d3: return true
+        case 0xa7d5...0xa7d9: return true
+        case 0xa7f2...0xa82c: return true
         case 0xa830...0xa839: return true
         case 0xa840...0xa877: return true
         case 0xa880...0xa8c5: return true
@@ -840,11 +842,11 @@ public extension UnicodeScalar {
         case 0xfb3e...0xfb3e: return true
         case 0xfb40...0xfb41: return true
         case 0xfb43...0xfb44: return true
-        case 0xfb46...0xfbc1: return true
-        case 0xfbd3...0xfd3f: return true
-        case 0xfd50...0xfd8f: return true
+        case 0xfb46...0xfbc2: return true
+        case 0xfbd3...0xfd8f: return true
         case 0xfd92...0xfdc7: return true
-        case 0xfdf0...0xfdfd: return true
+        case 0xfdcf...0xfdcf: return true
+        case 0xfdf0...0xfdff: return true
         case 0xfe20...0xfe2f: return true
         case 0xfe70...0xfe74: return true
         case 0xfe76...0xfefc: return true
@@ -878,10 +880,20 @@ public extension UnicodeScalar {
         case 0x104d8...0x104fb: return true
         case 0x10500...0x10527: return true
         case 0x10530...0x10563: return true
-        case 0x1056f...0x1056f: return true
+        case 0x1056f...0x1057a: return true
+        case 0x1057c...0x1058a: return true
+        case 0x1058c...0x10592: return true
+        case 0x10594...0x10595: return true
+        case 0x10597...0x105a1: return true
+        case 0x105a3...0x105b1: return true
+        case 0x105b3...0x105b9: return true
+        case 0x105bb...0x105bc: return true
         case 0x10600...0x10736: return true
         case 0x10740...0x10755: return true
         case 0x10760...0x10767: return true
+        case 0x10780...0x10785: return true
+        case 0x10787...0x107b0: return true
+        case 0x107b2...0x107ba: return true
         case 0x10800...0x10805: return true
         case 0x10808...0x10808: return true
         case 0x1080a...0x10835: return true
@@ -925,11 +937,12 @@ public extension UnicodeScalar {
         case 0x10eb0...0x10eb1: return true
         case 0x10f00...0x10f27: return true
         case 0x10f30...0x10f59: return true
+        case 0x10f70...0x10f89: return true
         case 0x10fb0...0x10fcb: return true
         case 0x10fe0...0x10ff6: return true
         case 0x11000...0x1104d: return true
-        case 0x11052...0x1106f: return true
-        case 0x1107f...0x110c1: return true
+        case 0x11052...0x11075: return true
+        case 0x1107f...0x110c2: return true
         case 0x110cd...0x110cd: return true
         case 0x110d0...0x110e8: return true
         case 0x110f0...0x110f9: return true
@@ -971,11 +984,11 @@ public extension UnicodeScalar {
         case 0x11600...0x11644: return true
         case 0x11650...0x11659: return true
         case 0x11660...0x1166c: return true
-        case 0x11680...0x116b8: return true
+        case 0x11680...0x116b9: return true
         case 0x116c0...0x116c9: return true
         case 0x11700...0x1171a: return true
         case 0x1171d...0x1172b: return true
-        case 0x11730...0x1173f: return true
+        case 0x11730...0x11746: return true
         case 0x11800...0x1183b: return true
         case 0x118a0...0x118f2: return true
         case 0x118ff...0x11906: return true
@@ -991,7 +1004,7 @@ public extension UnicodeScalar {
         case 0x119da...0x119e4: return true
         case 0x11a00...0x11a47: return true
         case 0x11a50...0x11aa2: return true
-        case 0x11ac0...0x11af8: return true
+        case 0x11ab0...0x11af8: return true
         case 0x11c00...0x11c08: return true
         case 0x11c0a...0x11c36: return true
         case 0x11c38...0x11c45: return true
@@ -1019,13 +1032,15 @@ public extension UnicodeScalar {
         case 0x12400...0x1246e: return true
         case 0x12470...0x12474: return true
         case 0x12480...0x12543: return true
+        case 0x12f90...0x12ff2: return true
         case 0x13000...0x1342e: return true
         case 0x13430...0x13438: return true
         case 0x14400...0x14646: return true
         case 0x16800...0x16a38: return true
         case 0x16a40...0x16a5e: return true
         case 0x16a60...0x16a69: return true
-        case 0x16a6e...0x16a6f: return true
+        case 0x16a6e...0x16abe: return true
+        case 0x16ac0...0x16ac9: return true
         case 0x16ad0...0x16aed: return true
         case 0x16af0...0x16af5: return true
         case 0x16b00...0x16b45: return true
@@ -1042,9 +1057,12 @@ public extension UnicodeScalar {
         case 0x1bc80...0x1bc88: return true
         case 0x1bc90...0x1bc99: return true
         case 0x1bc9c...0x1bca3: return true
+        case 0x1cf00...0x1cf2d: return true
+        case 0x1cf30...0x1cf46: return true
+        case 0x1cf50...0x1cfc3: return true
         case 0x1d000...0x1d0f5: return true
         case 0x1d100...0x1d126: return true
-        case 0x1d129...0x1d1e8: return true
+        case 0x1d129...0x1d1ea: return true
         case 0x1d200...0x1d245: return true
         case 0x1d2e0...0x1d2f3: return true
         case 0x1d300...0x1d356: return true
@@ -1072,6 +1090,7 @@ public extension UnicodeScalar {
         case 0x1d7ce...0x1da8b: return true
         case 0x1da9b...0x1da9f: return true
         case 0x1daa1...0x1daaf: return true
+        case 0x1df00...0x1df1e: return true
         case 0x1e000...0x1e006: return true
         case 0x1e008...0x1e018: return true
         case 0x1e01b...0x1e021: return true
@@ -1081,8 +1100,13 @@ public extension UnicodeScalar {
         case 0x1e130...0x1e13d: return true
         case 0x1e140...0x1e149: return true
         case 0x1e14e...0x1e14f: return true
+        case 0x1e290...0x1e2ae: return true
         case 0x1e2c0...0x1e2f9: return true
         case 0x1e2ff...0x1e2ff: return true
+        case 0x1e7e0...0x1e7e6: return true
+        case 0x1e7e8...0x1e7eb: return true
+        case 0x1e7ed...0x1e7ee: return true
+        case 0x1e7f0...0x1e7fe: return true
         case 0x1e800...0x1e8c4: return true
         case 0x1e8c7...0x1e8d6: return true
         case 0x1e900...0x1e94b: return true
