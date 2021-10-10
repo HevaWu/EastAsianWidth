@@ -11,11 +11,11 @@ import EastAsianWidth
 // https://github.com/ukitaka/EastAsianWidth.swift/blob/master/Tests/EastAsianWidthTests/EastAsianWideTests.swift
 class EastAsianWideTests: XCTestCase {
     func testEdgeCases() {
-        EastAsianWideEdgeUnicodeScalar.forEach(AssertEastAsianWide)
+        EastAsianWideEdgeUnicodeScalar.forEach(testScalarEastAsianWide)
     }
 
     func testNonEastAsianWideCharacters() {
-        AssertNotEastAsianWide("Hello")
+        testStringNotEastAsianWide("Hello")
     }
 
     func testContainsEastAsianWide() {

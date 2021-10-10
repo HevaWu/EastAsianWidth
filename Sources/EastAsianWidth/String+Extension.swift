@@ -51,9 +51,11 @@ public extension String {
         return unicodeScalars.contains { $0.isHalfwidth }
     }
 
-    /// Characters count up by O(n).
-    /// If the character is ASCII code then count is 1, or else count is 2.
-    /// Return value is sum of characters count.
+    /// EastAsianCode count
+    ///
+    /// Go through each character.
+    /// If the character is ASCII code, count is 1.
+    /// Else count is 2.
     var fullwidthHalfwidthCount: Int {
         return unicodeScalars.countByEastAsianWidth()
     }

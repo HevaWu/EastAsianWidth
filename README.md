@@ -2,9 +2,10 @@
 
 Parse Unicode EastAsianWidth from unicode.org & Generate related Swift file
 
-Unicode Version: 13.0
-- https://www.unicode.org/versions/Unicode13.0.0/ch18.pdf
-- https://www.unicode.org/Public/13.0.0/ucd/EastAsianWidth.txt
+Unicode Version: 14.0
+- https://www.unicode.org/versions/Unicode14.0.0/
+- https://www.unicode.org/reports/tr11/tr11-39.html
+- https://www.unicode.org/Public/14.0.0/ucd/EastAsianWidth.txt
 - http://unicode.org/reports/tr11/
 
 [![CI Status](https://img.shields.io/travis/HevaWu/UnicodeEastAsianWidth.svg?style=flat)](https://travis-ci.org/HevaWu/UnicodeEastAsianWidth)
@@ -31,10 +32,10 @@ According to Unicode guide, [East Asian Width](http://unicode.org/reports/tr11/)
 
 All we want to handle at here is the `fullwidth` & `halfwidth`, where the definition of them are(When mapping Unicode to East Asian legacy character):
 
-> - Wide Unicode characters always map to fullwidth characters.
-> - Narrow (and neutral) Unicode characters always map to halfwidth characters.
-> - Halfwidth Unicode characters always map to halfwidth characters.
-> - Ambiguous Unicode characters always map to fullwidth characters.
+> - Wide Unicode characters `always` map to `fullwidth` characters.
+> - Narrow (and neutral) Unicode characters `always` map to `halfwidth` characters.
+> - Halfwidth Unicode characters `always` map to `halfwidth` characters.
+> - Ambiguous Unicode characters `always` map to `fullwidth` characters.
 
 ## How to use
 

@@ -11,14 +11,14 @@ import EastAsianWidth
 // https://github.com/ukitaka/EastAsianWidth.swift/blob/master/Tests/EastAsianWidthTests/TestUtils.swift
 final class EastAsianAmbiguousTests: XCTestCase {
     func testEdgeCases() {
-        EastAsianAmbiguousEdgeUnicodeScalar.forEach(AssertEastAsianAmbiguous)
+        EastAsianAmbiguousEdgeUnicodeScalar.forEach(testScalarEastAsianAmbiguous(_:))
     }
 
     func testNonEastAsianAmbiguousCharacters() {
-        AssertNotEastAsianAmbiguous("Hello")
-        AssertNotEastAsianAmbiguous("こんにちわ")
-        AssertNotEastAsianAmbiguous("안녕하세요")
-        AssertNotEastAsianAmbiguous("你好")
+        testStringNotEastAsianAmbiguous("Hello")
+        testStringNotEastAsianAmbiguous("こんにちわ")
+        testStringNotEastAsianAmbiguous("안녕하세요")
+        testStringNotEastAsianAmbiguous("你好")
     }
 
     func testContainsEastAsianAmbiguous() {
