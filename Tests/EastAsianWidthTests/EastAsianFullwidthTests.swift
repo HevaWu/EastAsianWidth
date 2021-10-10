@@ -11,7 +11,7 @@ import EastAsianWidth
 // https://github.com/ukitaka/EastAsianWidth.swift/blob/master/Tests/EastAsianWidthTests/EastAsianFullwidthTests.swift
 class EastAsianFullwidthTests: XCTestCase {
     func testEdgeCases() {
-        EastAsianFullwidthEdgeUnicodeScalar.forEach(testScalarFullwidth)
+        EastAsianFullwidthEdgeUnicodeScalar.forEach(testScalarEastAsianFullwidth)
     }
 
     func testNonEastAsianFullwidthCharacters() {
