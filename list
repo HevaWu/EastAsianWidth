@@ -1,0 +1,12 @@
+
+trunk
+- Type: CDN
+- URL:  https://cdn.cocoapods.org/
+- Path: /Users/hewu/.cocoapods/repos/trunk
+
+UnicodeEastAsianWidth
+- Type: git (tags/2.0.0^0)
+- URL:  https://github.com/HevaWu/EastAsianWidth
+- Path: /Users/hewu/.cocoapods/repos/UnicodeEastAsianWidth
+
+2 repos
