@@ -11,14 +11,14 @@ import EastAsianWidth
 // https://github.com/ukitaka/EastAsianWidth.swift/blob/master/Tests/EastAsianWidthTests/EastAsianHalfwidthTests.swift
 class EastAsianHalfwidthTests: XCTestCase {
     func testEdgeCases() {
-        EastAsianHalfwidthEdgeUnicodeScalar.forEach(AssertEastAsianHalfwidth)
+        EastAsianHalfwidthEdgeUnicodeScalar.forEach(testScalarHalfwidth)
     }
 
     func testNonEastAsianHalfwidthCharacters() {
-        AssertNotEastAsianHalfwidth("Hello")
-        AssertNotEastAsianHalfwidth("こんにちわ")
-        AssertNotEastAsianHalfwidth("안녕하세요")
-        AssertNotEastAsianHalfwidth("你好")
+        testStringNotEastAsianHalfwidth("Hello")
+        testStringNotEastAsianHalfwidth("こんにちわ")
+        testStringNotEastAsianHalfwidth("안녕하세요")
+        testStringNotEastAsianHalfwidth("你好")
     }
 
     func testContainsEastAsianHalfwidth() {

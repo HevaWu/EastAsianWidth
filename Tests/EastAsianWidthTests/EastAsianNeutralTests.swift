@@ -11,14 +11,14 @@ import EastAsianWidth
 // https://github.com/ukitaka/EastAsianWidth.swift/blob/master/Tests/EastAsianWidthTests/EastAsianNeutralTests.swift
 class EastAsianNeutralTests: XCTestCase {
     func testEdgeCases() {
-        EastAsianNeutralEdgeUnicodeScalar.forEach(AssertEastAsianNeutral)
+        EastAsianNeutralEdgeUnicodeScalar.forEach(testScalarEastAsianNeutral)
     }
 
     func testNonEastAsianNeutralCharacters() {
-        AssertNotEastAsianNeutral("Hello")
-        AssertNotEastAsianNeutral("こんにちわ")
-        AssertNotEastAsianNeutral("안녕하세요")
-        AssertNotEastAsianNeutral("你好")
+        testStringNotEastAsianNeutral("Hello")
+        testStringNotEastAsianNeutral("こんにちわ")
+        testStringNotEastAsianNeutral("안녕하세요")
+        testStringNotEastAsianNeutral("你好")
     }
 
     func testContainsEastAsianNeutral() {

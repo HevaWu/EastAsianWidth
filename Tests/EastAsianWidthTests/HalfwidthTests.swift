@@ -11,58 +11,78 @@ import EastAsianWidth
 // https://github.com/ukitaka/EastAsianWidth.swift/blob/master/Tests/EastAsianWidthTests/TestUtils.swift
 class HalfwidthTests: XCTestCase {
     func testEdgeCases() {
-        EastAsianNarrowEdgeUnicodeScalar.forEach(AssertHalfwidth)
-        EastAsianHalfwidthEdgeUnicodeScalar.forEach(AssertHalfwidth)
-        EastAsianNarrowEdgeUnicodeScalar.forEach(AssertHalfwidthOrAmbiguous)
-        EastAsianHalfwidthEdgeUnicodeScalar.forEach(AssertHalfwidthOrAmbiguous)
-        EastAsianAmbiguousEdgeUnicodeScalar.forEach(AssertHalfwidthOrAmbiguous)
+        EastAsianNarrowEdgeUnicodeScalar.forEach(testScalarHalfwidth)
+        EastAsianHalfwidthEdgeUnicodeScalar.forEach(testScalarHalfwidth)
+        EastAsianNarrowEdgeUnicodeScalar.forEach(testScalarHalfwidthOrAmbiguous)
+        EastAsianHalfwidthEdgeUnicodeScalar.forEach(testScalarHalfwidthOrAmbiguous)
+        EastAsianAmbiguousEdgeUnicodeScalar.forEach(testScalarHalfwidthOrAmbiguous)
     }
 
     func testNonHalfwidthCharacters() {
-        AssertNotHalfwidth("あいうえお")
+        testStringNotHalfwidth("あいうえお")
+        testStringNotHalfwidth("ＡＢＣＤＥ")
+        testStringNotHalfwidth("０１２３４")
+        testStringNotHalfwidth("！＂＃＄％｟｠")
+        testStringNotHalfwidth("你好")
     }
 
     func testContainsHalfwidth() {
         XCTAssertFalse("¡".containsHalfwidthCharacters)
-        XCTAssertTrue("ABC".containsHalfwidthCharacters)
-        XCTAssertFalse("ＡＢＣ".containsHalfwidthCharacters)
+        XCTAssertTrue("ABCDEabcde".containsHalfwidthCharacters)
+        XCTAssertFalse("ＡＢＣＤＥ".containsHalfwidthCharacters)
         XCTAssertFalse("こんにちわ".containsHalfwidthCharacters)
         XCTAssertFalse("你好".containsHalfwidthCharacters)
         XCTAssertFalse("안녕하세요".containsHalfwidthCharacters)
 
         XCTAssertTrue("¡".containsHalfwidthOrAmbiguousCharacters)
-        XCTAssertTrue("ABC".containsHalfwidthOrAmbiguousCharacters)
-        XCTAssertFalse("ＡＢＣ".containsHalfwidthOrAmbiguousCharacters)
+        XCTAssertTrue("ABCDEabcde".containsHalfwidthOrAmbiguousCharacters)
+        XCTAssertFalse("ＡＢＣＤＥ".containsHalfwidthOrAmbiguousCharacters)
         XCTAssertFalse("こんにちわ".containsHalfwidthOrAmbiguousCharacters)
         XCTAssertFalse("你好".containsHalfwidthOrAmbiguousCharacters)
         XCTAssertFalse("안녕하세요".containsHalfwidthOrAmbiguousCharacters)
     }
+    
+    func testHalfWidthPunctuation() {
+        testStringHalfwidth("｡｢｣､")
+    }
+    
+    func testHalfwidthDigit() {
+        testStringHalfwidth("1234567890")
+    }
+    
+    func testHalfwidthEnglishLetters() {
+        testStringHalfwidth("abcdefghijklmnopqrstuvwxyz")
+        testStringHalfwidth("ABCDEFGHIJKLMNOPQRSTUVWXYZ")
+    }
 
     func testHalfwidthKatakana() {
-        AssertHalfwidth("ｱｲｳｴｵ")
-        AssertHalfwidth("ｶｷｸｹｺ")
-        AssertHalfwidth("ｻｼｽｾｿ")
-        AssertHalfwidth("ﾀﾁﾂﾃﾄ")
-        AssertHalfwidth("ﾅﾆﾇﾈﾉ")
-        AssertHalfwidth("ﾊﾋﾌﾍﾎ")
-        AssertHalfwidth("ﾏﾐﾑﾒﾓ")
-        AssertHalfwidth("ﾔﾕﾖ")
-        AssertHalfwidth("ﾜｦﾝ")
-        AssertHalfwidth("ｶﾞｷﾞｸﾞｹﾞｺﾞ")
-        AssertHalfwidth("ｻﾞｼﾞｽﾞｾﾞｿﾞ")
-        AssertHalfwidth("ﾀﾞﾁﾞﾂﾞﾃﾞﾄﾞ")
-        AssertHalfwidth("ﾊﾞﾋﾞﾌﾞﾍﾞﾎﾞ")
-        AssertHalfwidth("ﾊﾟﾋﾟﾌﾟﾍﾟﾎﾟ")
+        testStringHalfwidth("ｱｲｳｴｵ")
+        testStringHalfwidth("ｶｷｸｹｺ")
+        testStringHalfwidth("ｻｼｽｾｿ")
+        testStringHalfwidth("ﾀﾁﾂﾃﾄ")
+        testStringHalfwidth("ﾅﾆﾇﾈﾉ")
+        testStringHalfwidth("ﾊﾋﾌﾍﾎ")
+        testStringHalfwidth("ﾏﾐﾑﾒﾓ")
+        testStringHalfwidth("ﾔﾕﾖ")
+        testStringHalfwidth("ﾜｦﾝ")
+        testStringHalfwidth("ｶﾞｷﾞｸﾞｹﾞｺﾞ")
+        testStringHalfwidth("ｻﾞｼﾞｽﾞｾﾞｿﾞ")
+        testStringHalfwidth("ﾀﾞﾁﾞﾂﾞﾃﾞﾄﾞ")
+        testStringHalfwidth("ﾊﾞﾋﾞﾌﾞﾍﾞﾎﾞ")
+        testStringHalfwidth("ﾊﾟﾋﾟﾌﾟﾍﾟﾎﾟ")
     }
 
     func testHalfwidthHangul() {
-        AssertHalfwidth("ﾡﾢﾣﾤﾥﾦﾧﾨﾩﾪﾫﾬﾭﾮﾯﾰﾱﾲﾳﾴﾵﾶﾷﾸﾹﾺﾻﾼﾽﾾￂￃￄￅￆￇￊￋￌￍￎￏￒￓￔￕￖￗￚￛￜ")
+        testStringHalfwidth("ﾡﾢﾣﾤﾥﾦﾧﾨﾩﾪﾫﾬﾭﾮﾯﾰﾱﾲﾳﾴﾵﾶﾷﾸﾹﾺﾻﾼﾽﾾￂￃￄￅￆￇￊￋￌￍￎￏￒￓￔￕￖￗￚￛￜ")
     }
 
     static var allTests = [
         ("testEdgeCases", testEdgeCases),
         ("testNonHalfwidthCharacters", testNonHalfwidthCharacters),
         ("testContainsHalfwidth", testContainsHalfwidth),
+        ("testHalfWidthPunctuation", testHalfWidthPunctuation),
+        ("testHalfwidthDigit", testHalfwidthDigit),
+        ("testHalfwidthEnglishLetters", testHalfwidthEnglishLetters),
         ("testHalfwidthKatakana", testHalfwidthKatakana),
         ("testHalfwidthHangul", testHalfwidthHangul)
     ]
