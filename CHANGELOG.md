@@ -1,3 +1,10 @@
+## [v2.1.0](https://github.com/HevaWu/EastAsianWidth/releases/tag/2.1.0)
+
+### Changed
+
+- Update to use [Unicode 14.0](https://www.unicode.org/reports/tr11/tr11-39.html#Recommendations)
+- Add more tests
+
 ## [v2.0.0](https://github.com/HevaWu/EastAsianWidth/releases/tag/2.0.0)
 
 ### Changed
