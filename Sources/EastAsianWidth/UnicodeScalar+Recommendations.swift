@@ -15,7 +15,7 @@ public extension UnicodeScalar {
     /// - Halfwidth Unicode characters always map to halfwidth characters.
     /// - Ambiguous Unicode characters always map to fullwidth characters.
     ///
-    /// https://unicode.org/reports/tr11/#Recommendations
+    /// https://www.unicode.org/reports/tr11/tr11-39.html#Recommendations
 
     var isFullwidth: Bool {
         return isEastAsianFullwidth
