@@ -113,6 +113,11 @@ We could directly run `./Scripts/run.sh` which will generate the `UnicodeScarlar
 
 He Wu(HevaWu) hewu9375@gmail.com
 
+## Contributor
+
+freddi<https://github.com/freddi-kit>
+Ryan Wang<https://github.com/aelam>
+
 ## License
 
 UnicodeEastAsianWidth is available under the MIT license. See the LICENSE file for more info.
